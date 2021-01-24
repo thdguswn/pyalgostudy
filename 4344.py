@@ -1,6 +1,13 @@
 def score(a,b):
-    return a/b*100
+   return a/b*100
+
 C=int(input())
+            
 for i in range(C):
-    N=list(input())
-print(N)    
+    N=list(map(int,input().split()))
+    avg=sum(N[1:])/N[0]
+    num=0
+    for u in N:
+       if u<avg:
+          N.remove(u)
+    print(N)
